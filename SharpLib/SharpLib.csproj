@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95240A67-E880-4391-AD6D-69E846DF1693}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpLib</RootNamespace>
+    <AssemblyName>SharpLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>..\..\ExoAtlet.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\Extensions\Extension.ConcurrentQueue.cs" />
+    <Compile Include="Source\Extensions\Extension.BlockingCollection.cs" />
+    <Compile Include="Source\Extensions\Extension.Guid.cs" />
+    <Compile Include="Source\Extensions\Extensions.IntPtr.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.IDictionary-T.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.Queue-T.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Bool.cs" />
+    <Compile Include="Source\Extensions\Time\Extension.DateTime.cs" />
+    <Compile Include="Source\Helpers\Consoler.cs" />
+    <Compile Include="Source\Helpers\Crypto\Base64.cs" />
+    <Compile Include="Source\Helpers\Env.cs" />
+    <Compile Include="Source\Helpers\Diag.cs" />
+    <Compile Include="Source\Helpers\Hardware\Hardware.Net.IFace.cs" />
+    <Compile Include="Source\Helpers\Hardware\Hardware.Net.cs" />
+    <Compile Include="Source\Helpers\Images\Image.Pixels.cs" />
+    <Compile Include="Source\Helpers\Images\Image.Color.cs" />
+    <Compile Include="Source\Helpers\Images\Image.Typ.cs" />
+    <Compile Include="Source\Helpers\Images\Image.Bmp.cs" />
+    <Compile Include="Source\Helpers\Images\Image.Base.cs" />
+    <Compile Include="Source\Helpers\Json.cs" />
+    <Compile Include="Source\Helpers\Math\Maths.cs" />
+    <Compile Include="Source\Helpers\Resources\EmbeddedResources.cs" />
+    <Compile Include="Source\Helpers\Resources\EmbeddedResourceUri.cs" />
+    <Compile Include="Source\Helpers\Time\ITimeProvider.cs" />
+    <Compile Include="Source\Helpers\Time\TimeProvider.Manual.cs" />
+    <Compile Include="Source\Helpers\Time\TimeProvider.Real.cs" />
+    <Compile Include="Source\Helpers\Time\Time.cs" />
+    <Compile Include="Source\Enums\Endianess.cs" />
+    <Compile Include="Source\Enums\SortMode.cs" />
+    <Compile Include="Source\Events\EventArgs.Cancel.cs" />
+    <Compile Include="Source\Events\EventArgs{T}.Cancel.cs" />
+    <Compile Include="Source\Events\EventArgs{T}.Changing.cs" />
+    <Compile Include="Source\Events\EventArgs{T}.cs" />
+    <Compile Include="Source\Extensions\Extension.Assembly.cs" />
+    <Compile Include="Source\Extensions\Extension.Buffer.cs" />
+    <Compile Include="Source\Extensions\Extension.Char.cs" />
+    <Compile Include="Source\Extensions\Extension.Stream.cs" />
+    <Compile Include="Source\Extensions\Time\Extension.TimeSpan.cs" />
+    <Compile Include="Source\Extensions\Extension.Type.cs" />
+    <Compile Include="Source\Extensions\Extension.Version.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.Array-T.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.IEnumerable-T.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.IEnumerable.cs" />
+    <Compile Include="Source\Extensions\Linq\Extension.List-T.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Byte.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Double.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Float.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Integer.cs" />
+    <Compile Include="Source\Extensions\Number\Extension.Long.cs" />
+    <Compile Include="Source\Extensions\String\Extension.String.cs" />
+    <Compile Include="Source\Extensions\String\Extension.StringArray.cs" />
+    <Compile Include="Source\Extensions\String\Extension.StringBuilder.cs" />
+    <Compile Include="Source\Helpers\ByteList.cs" />
+    <Compile Include="Source\Helpers\Crypto\Aes.cs" />
+    <Compile Include="Source\Helpers\Crypto\Md5.cs" />
+    <Compile Include="Source\Helpers\Crypto\Sha.cs" />
+    <Compile Include="Source\Helpers\Encodings.cs" />
+    <Compile Include="Source\Helpers\Hardware\Hardware.Os.Typ.cs" />
+    <Compile Include="Source\Helpers\Hardware\Hardware.Os.cs" />
+    <Compile Include="Source\Helpers\Hardware\Hardware.cs" />
+    <Compile Include="Source\Helpers\Date.cs" />
+    <Compile Include="Source\Helpers\Files\File.Type.cs" />
+    <Compile Include="Source\Helpers\Files\Files.cs" />
+    <Compile Include="Source\Helpers\Files\Hex\IntelHexRecord.cs" />
+    <Compile Include="Source\Helpers\Files\Hex\IntelHex.cs" />
+    <Compile Include="Source\Helpers\Files\Hex\IntelHexRegion.cs" />
+    <Compile Include="Source\Helpers\Files\Hex\IntexHexRecordTyp.cs" />
+    <Compile Include="Source\Interfaces\IBufferable.cs" />
+    <Compile Include="Source\Interfaces\ITextable.cs" />
+    <Compile Include="Source\Helpers\Math\Crc\Crc16.cs" />
+    <Compile Include="Source\Helpers\Math\Crc\Crc32.cs" />
+    <Compile Include="Source\Helpers\Math\Crc\Crc8.cs" />
+    <Compile Include="Source\Helpers\Math\Crc\CrcXmodem.cs" />
+    <Compile Include="Source\Helpers\Math\Rand.cs" />
+    <Compile Include="Source\Helpers\Mem.cs" />
+    <Compile Include="Source\Helpers\Net\Net.Addr.cs" />
+    <Compile Include="Source\Helpers\Net\Net.Extension.cs" />
+    <Compile Include="Source\Helpers\Net\Net.IpAddr.cs" />
+    <Compile Include="Source\Helpers\Net\Net.Proto.cs" />
+    <Compile Include="Source\Helpers\Net\Sockets\Net.Socket.cs" />
+    <Compile Include="Source\Helpers\Net\Sockets\Net.Socket.Error.cs" />
+    <Compile Include="Source\Helpers\Net\Sockets\Net.Socket.EventArgs.cs" />
+    <Compile Include="Source\Helpers\Net\Sockets\Net.Socket.Server.cs" />
+    <Compile Include="Source\Helpers\Net\Sockets\Net.Socket.State.cs" />
+    <Compile Include="Source\Helpers\PathEx.cs" />
+    <Compile Include="Source\Helpers\Process\Processes.cs" />
+    <Compile Include="Source\Helpers\Splines\CubicSpline.cs" />
+    <Compile Include="Source\Helpers\Threads\Thread.Timer.cs" />
+    <Compile Include="Source\Helpers\Threads\Thread.Timer.Event.cs" />
+    <Compile Include="Source\Helpers\Threads\Thread.SharedId.cs" />
+    <Compile Include="Source\Helpers\Files\FsEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
